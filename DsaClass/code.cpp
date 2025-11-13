@@ -202,6 +202,53 @@ void Abbreviation(){
      else cout<<"False";
     
 }
+struct item{
+    int pair1;
+    int pair2;
+    int sum;
+};
+void sumEqualsToSumOrPairsOfEqualsSum(){
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    for(int i=0;i<n;i++) cin>>a[i];
+    vector<item> items;
+    unordered_set<int> k;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            // item it;
+            // it.pair1 = i;
+            // it.pair2 = j;
+            // it.sum = a[i]+a[j];
+            // items.push_back(it);
+            if(k.count(a[i]+a[j])){
+                cout<<i<<j;
+                return;
+            }
+            else
+                k.insert(a[i]+a[j]);
+    }
+   
+}   }
+void FirstMissingPositive(){
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    for(int i=0;i<n;i++) cin>>a[i];
+
+    set<int> s;
+    for(int i=0;i<n;i++) 
+    if(a[i]>0)
+    s.insert(a[i]);
+
+    int p = 1;
+    for(auto & x : s){
+        if(p!=x) break;
+        p++;
+    }
+  cout<<p;
+  
+}
 int main() {
 	int n;
 	// cin>>n;
