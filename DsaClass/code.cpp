@@ -247,7 +247,42 @@ void FirstMissingPositive(){
         p++;
     }
   cout<<p;
-  
+
+}
+void subsetSum3(){
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    for(int i=0;i<n;i++) cin>>a[i];
+    
+
+}
+void MaximumNumberofWordsYouCanType1935(){
+    string s;
+    cin>>s;
+    int n;
+    cin>>n;
+    cin.ignore();
+    unordered_set<char> k;
+    for(int i=0;i<n;i++){
+        char c;
+        cin>>c;
+        k.insert(c);
+    }
+    int count =0;
+    stringstream ss(s);
+    string word;
+    while(ss>>word){
+        bool can = true;
+        for(auto & ch : word){
+            if(k.find(ch)==k.end()){
+                can = false;
+                break;
+            }
+        }
+        if(can) count++;
+    }
+    cout<<count;
 }
 int main() {
 	int n;
