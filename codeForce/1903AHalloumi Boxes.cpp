@@ -15,7 +15,9 @@ int main(){
             for(int i=1;i<n;i++)
              if(a[i]<a[i-1]) check = true;
             if(check){  cout<<"No"<<endl;
-            continue;}
+            continue;
+        
+        }
         }
         cout<<"Yes"<<endl;
 
