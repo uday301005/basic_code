@@ -11,9 +11,7 @@ int main(){
   int m =  a[0];
   for(int i=1;i<n;i++)  m = max(m,a[i]-a[i-1]);
   m =  max(m , 2*(k- a[n-1]));
-
   cout<<m<<endl;
- 
 }
     return 0;
 }
