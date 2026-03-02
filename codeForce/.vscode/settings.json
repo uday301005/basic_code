@@ -3,5 +3,17 @@
         "*.js": "javascript",
         "iostream": "cpp",
         "vector": "cpp"
-    }
+    },
+    {
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*\\.(cpp|c|py|js|ts|java)$",
+        "cmd": "node tools/syntax-audio-agent.js \"${file}\""
+      }
+    ]
+  }
+}
 }
